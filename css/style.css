@@ -1,0 +1,35 @@
+.contenedor{
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    grid-gap: 10px;  /* es el espacioado entre los grids*/
+    display: grid;  /*habilitamos los grids*/  
+    /*grid-template-columns: 150px 150px 250px; ponemos la cantidas de columnas con el espacio de anchura que queremos. Ademas esto solo funcionas en las clases padres*/
+    /*grid-template-columns: 30% 40% 18%;
+    grid-template-columns: minmax(3fr,2fr) 1fr 2fr 1fr;*/
+    grid-template-columns: 3fr 8fr 3fr;    /* este es mas practico que usar los anteriores ya que maneja mejor la division en la pantalla. tambien hay una funcion grid-template-columns: repeat (8; 1fr) que con da 8 columns de 1fr */
+    grid-template-rows: 4fr 25fr 2fr; /*lo mismo  solo que el tamaño se van a la altura*/
+}
+.contenedor>div{   /*de contenerdor padre los div's que estan dentro estilizar*/
+    background-color: greenyellow;
+}
+.contenedor .header{
+    background-color: pink;
+    grid-column: 1/4; /* este grip ocupa los espacios decolunma de 1 a 3*/
+    /*grid-row: 1/3;*/
+}
+.contenedor .side1{
+    background-color: antiquewhite;
+    grid-column: 1/1;
+}
+.contenedor .side2{
+    background-color: antiquewhite;
+    grid-column: 3/4;
+}
+.contenedor .contenido{
+    background-color: red;
+}
+.contenedor .footer{
+    grid-column: 1/4;
+}

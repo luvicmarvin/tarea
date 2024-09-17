@@ -1,0 +1,58 @@
+.contenedor{
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    display: grid;
+    grid-gap: 10px;  
+    grid-template-columns: 1fr 3fr 1fr;   
+    grid-template-rows: 2fr 16fr 2fr;
+    grid-template-areas: "header header header"
+                         "side1 contenido side2"
+                         "footer footer footer";
+    /* lo anterior nos sirve a poner una etiqueta a una area determinada*/
+    
+}
+.contenedor>div{   
+    background-color: greenyellow;
+}
+.contenedor .header{
+    background-color: yellow;
+    /*grid-column-start: header;
+    grid-column-end: header;*/
+    grid-column: header;
+}
+.contenedor .contenido{
+    background-color: pink;
+    grid-column: contenido;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+}
+.contenedor .side1{
+    background-color: antiquewhite;
+    grid-column: side1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.contenedor .side2{
+    background-color: antiquewhite;
+    grid-column: side2;
+}
+.contenedor .footer{
+    background-color: orange;
+    grid-column: footer;
+}
+.contenedor .side1 .sd{
+    background-color: red;
+    
+}
+.contenedor .contenido .con{
+    background-color: orange;
+}
+.contenedor .contenido .con1{
+    background-color: orange;
+    grid-column: 1/4;
+}
